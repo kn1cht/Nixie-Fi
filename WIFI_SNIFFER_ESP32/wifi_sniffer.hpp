@@ -2,7 +2,6 @@
 #define __WIFI_SNIFFER_HPP__
 
 #include <esp_wifi.h>
-#include <esp_event_loop.h>
 
 extern esp_err_t event_handler();
 
@@ -30,4 +29,4 @@ public:
 	void set_channel(uint8_t channel);
 };
 
-#endif // __WIFI_SNIFFER_HPP__
+#endif // WIFI_SNIFFER_HPP
