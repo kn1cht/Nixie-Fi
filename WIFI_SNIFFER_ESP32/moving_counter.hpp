@@ -6,15 +6,17 @@
 
 class MovingCounter {
 private:
-  uint8_t ind = 0;
-  uint8_t num = 0;
-  uint16_t sum = 0;
-  std::vector<uint8_t> count_vec;
+  int8_t ind = 0;
+  int8_t num = 0;
+  int16_t sum = 0;
+  std::vector<int8_t> count_vec;
 public:
   MovingCounter(uint8_t _num);
-  uint16_t push(uint8_t val);
-  explicit operator uint16_t() const noexcept;
-  MovingCounter& operator+=(const uint8_t& val) ;
+  void push(int8_t val);
+  int16_t get();
+  double get_average();
+  explicit operator int16_t() const noexcept;
+  MovingCounter& operator+=(const int8_t& val) ;
 };
 
 #endif // MOVING_COUNTER_HPP
